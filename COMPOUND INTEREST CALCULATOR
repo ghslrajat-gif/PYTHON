@@ -1,0 +1,29 @@
+
+# Formula is : A = P(1+r/n)^t (A = final Amount, P = principle, r = interest rate, t = time
+
+principle = 0
+rate = 0
+time = 0
+
+
+#another method to enter the zero value also
+while True:
+    principle = int(input("Enter your Principle amount :  "))
+    if principle < 0 :
+        print("Principle cannot be less than zero")
+    else:
+        break
+while True:
+    rate = int(input("Enter rate of interest :  "))
+    if rate < 0 :
+        print("Rate of interest cannot be less than zero")
+    else :
+        break
+while True :
+   time = int(input("Enter time :  "))
+   if time < 0 :
+        print("Time cannot be less than zero")
+   else :
+       break
+total = principle * pow((1 + rate / 100), time)
+print(f"Balance after {time} year/s is : {total:.2f} rs")
