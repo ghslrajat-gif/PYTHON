@@ -1,2 +1,3 @@
 # PYTHON
-Learning Python
+Sharing my mini Projects
+
