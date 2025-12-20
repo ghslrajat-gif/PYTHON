@@ -1,0 +1,68 @@
+import random
+
+# Dice faces using ASCII art
+dice_art = {
+    1: (
+        "┌─────────┐",
+        "│         │",
+        "│    ●    │",
+        "│         │",
+        "└─────────┘"
+    ),
+    2: (
+        "┌─────────┐",
+        "│  ●      │",
+        "│         │",
+        "│      ●  │",
+        "└─────────┘"
+    ),
+    3: (
+        "┌─────────┐",
+        "│  ●      │",
+        "│    ●    │",
+        "│      ●  │",
+        "└─────────┘"
+    ),
+    4: (
+        "┌─────────┐",
+        "│  ●   ●  │",
+        "│         │",
+        "│  ●   ●  │",
+        "└─────────┘"
+    ),
+    5: (
+        "┌─────────┐",
+        "│  ●   ●  │",
+        "│    ●    │",
+        "│  ●   ●  │",
+        "└─────────┘"
+    ),
+    6: (
+        "┌─────────┐",
+        "│  ●   ●  │",
+        "│  ●   ●  │",
+        "│  ●   ●  │",
+        "└─────────┘"
+    )
+}
+
+# Ask user how many dice to roll
+num_of_dice = int(input("How many dice?: "))
+
+dice = []
+total = 0
+
+# Roll the dice
+for _ in range(num_of_dice):
+    dice.append(random.randint(1, 6))
+
+# Print dice faces
+for i in range(num_of_dice):
+    for line in dice_art[dice[i]]:
+        print(line)
+
+# Calculate total
+for value in dice:
+    total += value
+
+print(f"Total: {total}")
